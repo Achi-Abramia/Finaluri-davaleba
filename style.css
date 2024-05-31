@@ -4,9 +4,34 @@
     box-sizing: border-box;
 }
 
+           /* FONTS */
+
+.roca,
+.main_number,
+.about_me {
+    font-family: "Poppins-ExtraBold";
+}
+
+.transparent {
+    font-family: "Montserrat-Regular";
+}
+
+.main_sldier_text{
+    font-family: "GlacialIndifference-Regular";
+}
+
+.slider_name {
+    font-family: "GlacialIndifference-Bold";
+}
+
+.clients {
+    font-family: "Montserrat-Bold";
+}
+
      /* MAIN SLIDER */
 
 .slider {
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -18,6 +43,7 @@
 
 .slide_pictures img {
     width: 100%;
+    object-fit: cover;
 }
 
 .slider button {
@@ -40,8 +66,111 @@
     right: 0;
 }
 
-@keyframes slider_animation {
-    0% {left: 0;}
-    50% {left: -100%;}
-    100% {left: -400%;}
+.roca {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    line-height: 20px;
+    max-width: 130px;
+}
+
+.roca_bold {
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    color: #1A1A1A;
+}
+
+.blue_dot {
+    color: #0081FF;
+    font-size: 33px;
+}
+
+.transparent {
+    color: #B3B3B3;
+    font-size: 13px;;
+}
+
+.main_number {
+    position: absolute;
+    right: 80px;
+    top: 75px;
+    line-height: 130px;
+    color: #1C1C1C;
+    font-size: 158px;
+    letter-spacing: 4.75px;
+    z-index: 5;
+}
+
+.about_me {
+    position: absolute;
+    right: 45px;
+    top: 105px;
+    color: #373737;
+    font-size: 43px;
+    letter-spacing: 1.3px;
+    z-index: 10;
+}
+
+.main_slider_text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 400px;
+    top: 50%;
+    color: #212121;
+
+}
+
+.slider_hi {
+    font-size: 50px;
+    letter-spacing: 0.75px;
+}
+
+.slider_name {
+    font-size: 71px;
+    letter-spacing: 1.06px;
+}
+
+.slider_prof {
+    font-size: 23px; 
+}
+
+.slider_socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    padding-left: 5px;
+}
+
+.clients{
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+}
+
+.clients_percent {
+    color: #E93656;
+    font-size: 24px;
+}
+
+.clients_text {
+    color: #212121;
+    font-size: 24px;
+}
+
+.clients_bar {
+    width: 120%;
+    height: 8px;
+    appearance: none;
+}
+
+progress::-webkit-progress-value {
+    background:  #E93656;
+    border-radius: 12px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 12px;
+
 }

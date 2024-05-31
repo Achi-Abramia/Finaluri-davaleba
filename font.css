@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url(Fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GlacialIndifference-Regular";
+    src: url(Fonts/GlacialIndifference-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GlacialIndifference-Bold";
+    src: url(Fonts/GlacialIndifference-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(Fonts/Montserrat-Bold.ttf);
+}
