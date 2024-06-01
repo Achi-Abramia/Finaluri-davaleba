@@ -69,7 +69,7 @@
 .roca {
     position: absolute;
     left: 30px;
-    top: 50px;
+    top: 55px;
     line-height: 20px;
     max-width: 130px;
 }
@@ -92,19 +92,18 @@
 
 .main_number {
     position: absolute;
-    right: 80px;
-    top: 75px;
-    line-height: 130px;
+    right: 100px;
+    top: 0;
     color: #1C1C1C;
     font-size: 158px;
     letter-spacing: 4.75px;
-    z-index: 5;
+    z-index: 1;
 }
 
 .about_me {
     position: absolute;
-    right: 45px;
-    top: 105px;
+    right: 67px;
+    top: 85px;
     color: #373737;
     font-size: 43px;
     letter-spacing: 1.3px;
@@ -115,10 +114,9 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 400px;
-    top: 50%;
+    right: 300px;
+    bottom: 200px;
     color: #212121;
-
 }
 
 .slider_hi {
@@ -173,4 +171,252 @@ progress::-webkit-progress-value {
 progress::-webkit-progress-bar {
     border-radius: 12px;
 
+}
+
+                /* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+    .roca {
+        max-width: 120px;
+        top: 45px;
+    }
+    
+    .roca_bold {
+        font-size: 25px;
+    }
+
+    .blue_dot {
+        font-size: 20px;
+    }
+    
+    .transparent {
+        font-size: 10px;;
+    }
+
+    .main_number {
+        right: 70px;
+        top: 20px;
+        font-size: 90px;
+    }
+
+    .about_me {
+        right: 50px;
+        top: 70px;
+        font-size: 25px;
+    }
+
+    .main_slider_text {
+        right: 210px;
+        bottom: 150px;
+    }
+
+    .slider_hi {
+        font-size: 25px;
+    }
+
+    .slider_name {
+        font-size: 35px;
+    }
+
+    .slider_prof {
+        font-size: 13px; 
+    }
+
+    .slider_socials {
+        gap: 15px;
+        margin-top: 20px;
+        padding-left: 5px;
+    }
+
+    .clients {
+        bottom: 40px;
+        right: 90px;
+    }
+    
+    .clients_percent {
+        font-size: 18px;
+    }
+    
+    .clients_text {
+        font-size: 18px;
+    }
+
+    .clients_bar {
+        height: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .roca {
+        max-width: 80px;
+        top: 25px;
+        line-height: 15px;
+    }
+    
+    .roca_bold {
+        font-size: 15px;
+    }
+
+    .blue_dot {
+        font-size: 18px;
+    }
+    
+    .transparent {
+        font-size: 8px;;
+    }
+
+    .main_number {
+        right: 40px;
+        top: 5px;
+        font-size: 55px;
+    }
+
+    .about_me {
+        right: 27px;
+        top: 35px;
+        font-size: 16px;
+    }
+
+    .main_slider_text {
+        right: 140px;
+        bottom: 130px;
+    }
+
+    .slider_hi {
+        font-size: 16px;
+    }
+
+    .slider_name {
+        font-size: 24px;
+    }
+
+    .slider_prof {
+        font-size: 8px; 
+    }
+
+    .slider_socials {
+        gap: 5px;
+        margin-top: 15px;
+        padding-left: 5px;
+    }
+
+    .slider_socials img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .clients {
+        bottom: 40px;
+        right: 90px;
+    }
+
+    .progress {
+        margin-top: -10px;
+    }
+    
+    .clients_percent {
+        font-size: 10px;
+    }
+    
+    .clients_text {
+        font-size: 10px;
+    }
+
+    .clients_bar {
+        height: 3px;
+    }
+
+    .slider button {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    
+    .roca {
+        max-width: 70px;
+        top: 15px;
+        left: 15px;
+        line-height: 10px;
+    }
+    
+    .roca_bold {
+        font-size: 12px;
+    }
+
+    .blue_dot {
+        font-size: 10px;
+    }
+    
+    .transparent {
+        font-size: 7px;;
+    }
+
+    .main_number {
+        right: 16px;
+        top: 5px;
+        font-size: 30px;
+    }
+
+    .about_me {
+        right: 10px;
+        top: 20px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .main_slider_text {
+        right: 60px;
+        bottom: 50px;
+    }
+
+    .slider_hi {
+        font-size: 10px;
+    }
+
+    .slider_name {
+        font-size: 14px;
+    }
+
+    .slider_prof {
+        font-size: 5px; 
+    }
+
+    .slider_socials {
+        gap: 5px;
+        margin-top: 5px;
+        padding-left: 5px;
+    }
+
+    .slider_socials img{
+        width: 10px;
+        height: 10px;
+    }
+
+    .clients {
+        bottom: 20px;
+        right: 40px;
+    }
+
+    .progress {
+        margin-top: -15px;
+    }
+    
+    .clients_percent {
+        font-size: 6px;
+    }
+    
+    .clients_text {
+        font-size: 6px;
+    }
+
+    .clients_bar {
+        height: 2px;
+    }
+
+    .slider button {
+        padding: 10px 5px;
+    }
 }
