@@ -22,3 +22,13 @@
     font-family: "Montserrat-Bold";
     src: url(Fonts/Montserrat-Bold.ttf);
 }
+
+@font-face {
+    font-family: "Muli";
+    src: url(Fonts/Muli.ttf);
+}
+
+@font-face {
+    font-family: "Muli-Regular";
+    src: url(Fonts/Muli-Regular.ttf);
+}
