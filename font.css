@@ -32,3 +32,8 @@
     font-family: "Muli-Regular";
     src: url(Fonts/Muli-Regular.ttf);
 }
+
+@font-face {
+    font-family: "Muli-Light";
+    src: url(Fonts/Muli-Light.ttf);
+}

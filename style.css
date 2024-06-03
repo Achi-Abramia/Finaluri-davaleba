@@ -28,7 +28,10 @@
     .slider_name,
     .my_info_name,
     .hire_me,
-    .my_info_stats {
+    .my_info_stats,
+    .contact_card_title,
+    .services_title,
+    .hover_title {
         font-family: "GlacialIndifference-Bold";
     }
 
@@ -36,12 +39,17 @@
         font-family: "Montserrat-Bold";
     }
 
-    .my_info_prof {
+    .my_info_prof,
+    .contact_card_text {
         font-family: "Muli";
     }
 
     .my_info_about {
         font-family: "Muli-Regular";
+    }
+
+    .hover_text {
+        font-family: "Muli-Light";
     }
 
         /* MAIN SLIDER */
@@ -329,289 +337,373 @@
     .contact_card_text {
         color: #dfdfdf;
         margin-bottom: 4px;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
+
+
+                 /* SERVICES */
+
+    .services_container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 77%;
+        margin: 110px auto;
+        gap: 10px;
+    }
+
+    .services_card_box{
+        background-color: #FAFAFA;
+        padding: 110px 0px 110px 0px; 
+        transition: all 0.7s;
+    }
+    
+    .before_hover_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .after_hover_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        display: none;
+    }
+
+    .services_title,
+    .hover_title {
+        font-size: 22px;
+        letter-spacing: 0.44px;
+    }
+
+    .hover_title {
+        color: #FFFFFF  ;
+    }
+
+    .hover_text {
+        color: #ECECEC;
+        padding: 0px 5px 0px 5px;
+        max-width: 260px;
+    }
+
+    .services_card_box:hover {
+        background-color: #15263E;
+    }
+
+    .services_card_box:hover .before_hover_container {
+        display: none;
+    }
+
+    .services_card_box:hover .after_hover_container {
+        display: flex;
     }
 
 
                 /* RESPONSIVE */
 
-@media (max-width: 1024px) {
+    @media (max-width: 1024px) {
 
-    .roca {
-        max-width: 120px;
-        top: 45px;
-    }
-    
-    .roca_bold {
-        font-size: 25px;
-    }
+        .roca {
+            max-width: 120px;
+            top: 45px;
+        }
+        
+        .roca_bold {
+            font-size: 25px;
+        }
 
-    .blue_dot {
-        font-size: 20px;
-    }
-    
-    .transparent {
-        font-size: 10px;;
-    }
+        .blue_dot {
+            font-size: 20px;
+        }
+        
+        .transparent {
+            font-size: 10px;;
+        }
 
-    .main_number {
-        right: 70px;
-        top: 20px;
-        font-size: 90px;
-    }
+        .main_number {
+            right: 70px;
+            top: 20px;
+            font-size: 90px;
+        }
 
-    .about_me {
-        right: 50px;
-        top: 70px;
-        font-size: 25px;
-    }
+        .about_me {
+            right: 50px;
+            top: 70px;
+            font-size: 25px;
+        }
 
-    .main_slider_text {
-        right: 210px;
-        bottom: 150px;
-    }
+        .main_slider_text {
+            right: 210px;
+            bottom: 150px;
+        }
 
-    .slider_hi {
-        font-size: 25px;
-    }
+        .slider_hi {
+            font-size: 25px;
+        }
 
-    .slider_name {
-        font-size: 35px;
-    }
+        .slider_name {
+            font-size: 35px;
+        }
 
-    .slider_prof {
-        font-size: 13px; 
-    }
+        .slider_prof {
+            font-size: 13px; 
+        }
 
-    .slider_socials {
-        gap: 15px;
-        margin-top: 20px;
-        padding-left: 5px;
-    }
+        .slider_socials {
+            gap: 15px;
+            margin-top: 20px;
+            padding-left: 5px;
+        }
 
-    .clients {
-        bottom: 40px;
-        right: 90px;
-    }
-    
-    .clients_percent {
-        font-size: 18px;
-    }
-    
-    .clients_text {
-        font-size: 18px;
-    }
+        .clients {
+            bottom: 40px;
+            right: 90px;
+        }
+        
+        .clients_percent {
+            font-size: 18px;
+        }
+        
+        .clients_text {
+            font-size: 18px;
+        }
 
-    .clients_bar {
-        height: 5px;
-    }
-}
+        .clients_bar {
+            height: 5px;
+        }
 
-@media (max-width: 930px) {
-
-    .roca {
-        max-width: 80px;
-        top: 25px;
-        line-height: 15px;
-    }
-    
-    .roca_bold {
-        font-size: 15px;
+        .services_container{
+            max-width: 85%;
+        }
     }
 
-    .blue_dot {
-        font-size: 18px;
-    }
-    
-    .transparent {
-        font-size: 8px;;
-    }
+    @media (max-width: 940px) {
 
-    .main_number {
-        right: 40px;
-        top: 5px;
-        font-size: 55px;
-    }
+        .roca {
+            max-width: 80px;
+            top: 25px;
+            line-height: 15px;
+        }
+        
+        .roca_bold {
+            font-size: 15px;
+        }
 
-    .about_me {
-        right: 27px;
-        top: 35px;
-        font-size: 16px;
-    }
+        .blue_dot {
+            font-size: 18px;
+        }
+        
+        .transparent {
+            font-size: 8px;;
+        }
 
-    .main_slider_text {
-        right: 140px;
-        bottom: 130px;
-    }
+        .main_number {
+            right: 40px;
+            top: 5px;
+            font-size: 55px;
+        }
 
-    .slider_hi {
-        font-size: 16px;
-    }
+        .about_me {
+            right: 27px;
+            top: 35px;
+            font-size: 16px;
+        }
 
-    .slider_name {
-        font-size: 24px;
-    }
+        .main_slider_text {
+            right: 140px;
+            bottom: 130px;
+        }
 
-    .slider_prof {
-        font-size: 8px; 
-    }
+        .slider_hi {
+            font-size: 16px;
+        }
 
-    .slider_socials {
-        gap: 5px;
-        margin-top: 15px;
-        padding-left: 5px;
-    }
+        .slider_name {
+            font-size: 24px;
+        }
 
-    .slider_socials img{
-        width: 15px;
-        height: 15px;
-    }
+        .slider_prof {
+            font-size: 8px; 
+        }
 
-    .clients {
-        bottom: 40px;
-        right: 90px;
-    }
+        .slider_socials {
+            gap: 5px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
 
-    .main_slider_progress {
-        margin-top: -10px;
-    }
-    
-    .clients_percent {
-        font-size: 10px;
-    }
-    
-    .clients_text {
-        font-size: 10px;
-    }
+        .slider_socials img{
+            width: 15px;
+            height: 15px;
+        }
 
-    .clients_bar {
-        height: 3px;
-    }
+        .clients {
+            bottom: 40px;
+            right: 90px;
+        }
 
-    .slider button {
-        padding: 20px 15px;
-    }
+        .main_slider_progress {
+            margin-top: -10px;
+        }
+        
+        .clients_percent {
+            font-size: 10px;
+        }
+        
+        .clients_text {
+            font-size: 10px;
+        }
 
-    .my_info_container {
-    display: flex;
-    flex-direction: column;
-    }
+        .clients_bar {
+            height: 3px;
+        }
 
-    .my_info_image {
-        order: -1;
-    }
+        .slider button {
+            padding: 20px 15px;
+        }
 
-    .my_info_image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .my_info_text {
+        .my_info_container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-    .hire_me {
-        align-self: center;
+        }
+
+        .my_info_image {
+            order: -1;
+        }
+
+        .my_info_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .my_info_text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hire_me {
+            align-self: center;
+        }
+
+        .my_info_stats {
+            min-width: 300px;
+        }
+
+        .progress_container {
+            width: 100%;
+        }
+
+        .contact_card_container {
+            flex-direction: column;
+        }
+
+        .services_container{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            max-width: 90%;
+        }
+
+        .services_card_box {
+            padding: 130px 0px 130px 0px ;
+        }
     }
 
-    .my_info_stats {
-        min-width: 300px;
-    }
+    @media (max-width: 580px) {
+        
+        .roca {
+            max-width: 70px;
+            top: 15px;
+            left: 15px;
+            line-height: 10px;
+        }
+        
+        .roca_bold {
+            font-size: 12px;
+        }
 
-    .progress_container {
-        width: 100%;
-    }
+        .blue_dot {
+            font-size: 10px;
+        }
+        
+        .transparent {
+            font-size: 7px;;
+        }
 
-    .contact_card_container {
-        flex-direction: column;
-    }
-}
+        .main_number {
+            right: 16px;
+            top: 5px;
+            font-size: 30px;
+        }
 
-@media (max-width: 580px) {
-    
-    .roca {
-        max-width: 70px;
-        top: 15px;
-        left: 15px;
-        line-height: 10px;
-    }
-    
-    .roca_bold {
-        font-size: 12px;
-    }
+        .about_me {
+            right: 10px;
+            top: 20px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
 
-    .blue_dot {
-        font-size: 10px;
-    }
-    
-    .transparent {
-        font-size: 7px;;
-    }
+        .main_slider_text {
+            right: 60px;
+            bottom: 50px;
+        }
 
-    .main_number {
-        right: 16px;
-        top: 5px;
-        font-size: 30px;
-    }
+        .slider_hi {
+            font-size: 10px;
+        }
 
-    .about_me {
-        right: 10px;
-        top: 20px;
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
+        .slider_name {
+            font-size: 14px;
+        }
 
-    .main_slider_text {
-        right: 60px;
-        bottom: 50px;
-    }
+        .slider_prof {
+            font-size: 5px; 
+        }
 
-    .slider_hi {
-        font-size: 10px;
-    }
+        .slider_socials {
+            gap: 5px;
+            margin-top: 5px;
+            padding-left: 5px;
+        }
 
-    .slider_name {
-        font-size: 14px;
-    }
+        .slider_socials img{
+            width: 10px;
+            height: 10px;
+        }
 
-    .slider_prof {
-        font-size: 5px; 
-    }
+        .clients {
+            bottom: 20px;
+            right: 40px;
+        }
 
-    .slider_socials {
-        gap: 5px;
-        margin-top: 5px;
-        padding-left: 5px;
-    }
+        .main_slider_progress {
+            margin-top: -15px;
+        }
+        
+        .clients_percent {
+            font-size: 6px;
+        }
+        
+        .clients_text {
+            font-size: 6px;
+        }
 
-    .slider_socials img{
-        width: 10px;
-        height: 10px;
-    }
+        .clients_bar {
+            height: 2px;
+        }
 
-    .clients {
-        bottom: 20px;
-        right: 40px;
+        .slider button {
+            padding: 10px 5px;
+        }
+        .services_container{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            max-width: 80%;
+        }
     }
-
-    .main_slider_progress {
-        margin-top: -15px;
-    }
-    
-    .clients_percent {
-        font-size: 6px;
-    }
-    
-    .clients_text {
-        font-size: 6px;
-    }
-
-    .clients_bar {
-        height: 2px;
-    }
-
-    .slider button {
-        padding: 10px 5px;
-    }
-}
