@@ -31,7 +31,8 @@
     .my_info_stats,
     .contact_card_title,
     .services_title,
-    .hover_title {
+    .hover_title,
+    .rec_name {
         font-family: "GlacialIndifference-Bold";
     }
 
@@ -50,6 +51,14 @@
 
     .hover_text {
         font-family: "Muli-Light";
+    }
+
+    .rec_text {
+        font-family: "Roboto-Light";
+    }
+
+    .rec_prof {
+        font-family: "Roboto-Regular";
     }
 
         /* MAIN SLIDER */
@@ -227,6 +236,7 @@
         width: 300px;
         color: #555555;
         font-size: 15px;
+        line-height: 26px;
         text-align: justify;
         margin: 40px 0px 40px 0px ;
     }
@@ -317,7 +327,7 @@
     }
 
     .contact_card {
-        min-width: 290px;
+        min-width: 300px;
         display: flex;
         gap: 15px;
     }
@@ -354,9 +364,13 @@
     }
 
     .services_card_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
         background-color: #FAFAFA;
-        padding: 110px 0px 110px 0px; 
-        transition: all 0.7s;
+        transition: all 0.8s;
     }
     
     .before_hover_container {
@@ -389,6 +403,7 @@
     .hover_text {
         color: #ECECEC;
         padding: 0px 5px 0px 5px;
+        line-height: 26px;
         max-width: 260px;
     }
 
@@ -402,6 +417,84 @@
 
     .services_card_box:hover .after_hover_container {
         display: flex;
+    }
+
+
+                /* RECOMENDATIONS */
+
+    .rec_container {
+        background-image: url(Images/clip.jpg);
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 150px 0px 150px 0px;
+    }
+
+    .rec_container_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px; 
+    }
+
+    .rec_text {
+        max-width: 500px;
+        text-align: end;
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 0.45px;
+        color: #FFFFFF;
+    }
+
+    .rec_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed #FFFFFF;
+        border-radius: 50%;
+        padding: 8px
+    }
+
+    .rec_prof_container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .rec_quote {
+        margin-bottom: 24px;
+    }
+
+    .rec_prof {
+        font-size: 13px;
+        letter-spacing: 0.52px;
+        color: #E93656;
+    }
+
+    .rec_name {
+        font-size: 28px;
+        letter-spacing: 0.84px;
+        color: #FFFFFF;
+    }
+
+    .rec_slider_dots {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .rec_slider_button {
+        border: 2px solid #FFFFFF;
+        background-color: #FFFFFF00;
+        width: 13px;
+        height: 13px;
+    }
+
+    .rec_slider_button:hover {
+        border: 2px solid #E93656;
     }
 
 
@@ -480,6 +573,10 @@
 
         .services_container{
             max-width: 85%;
+        }
+
+        .rec_text {
+            max-width: 300px;
         }
     }
 
@@ -610,8 +707,36 @@
             max-width: 90%;
         }
 
-        .services_card_box {
-            padding: 130px 0px 130px 0px ;
+        .rec_container {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .rec_container_card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+            width: 100%;
+        }
+
+        .rec_image,
+        .rec_prof_container {
+            order: -1;
+        }
+
+        .rec_container {
+            padding: 70px 0px 70px 0px;
+        }
+
+        .rec_text {
+            text-align: center;
+        }
+
+        .rec_slider_dots{
+            flex-direction: row;
+            margin-left: 0px;
         }
     }
 

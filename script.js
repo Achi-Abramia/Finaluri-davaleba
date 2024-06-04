@@ -67,6 +67,15 @@
         }
     })
 
+    const recSlideCard = document.querySelector(".rec_container")
+
+    let recSlideIndex = 0
+
+    function recMoveSlide() {
+        const next = -recSlideIndex * 100
+        recSlideCard.style.transform = `translate(${next}%)`
+    }
+
 
     // function move() {
     //     var elem = document.getElementById("myBar");
