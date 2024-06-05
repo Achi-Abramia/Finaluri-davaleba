@@ -425,19 +425,33 @@
     .rec_container {
         background-image: url(Images/clip.jpg);
         background-size: cover;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 90px;
+    }
+
+    .rec_slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 920px;
+        overflow: hidden;
         gap: 100px;
         padding: 150px 0px 150px 0px;
+        transition: ease 0.5s;
     }
 
     .rec_container_card {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         gap: 40px; 
+    }
+
+    .rec_container_card.active {
+        display: flex;
     }
 
     .rec_text {
@@ -491,6 +505,10 @@
         background-color: #FFFFFF00;
         width: 13px;
         height: 13px;
+    }
+
+    .rec_slider_button.active {
+        border: 2px solid #E93656;
     }
 
     .rec_slider_button:hover {
@@ -575,8 +593,12 @@
             max-width: 85%;
         }
 
+        .rec_container {
+            gap: 0px;
+        }
+
         .rec_text {
-            max-width: 300px;
+            max-width: 280px;
         }
     }
 
@@ -709,11 +731,15 @@
 
         .rec_container {
             flex-direction: column;
+        }
+
+        .rec_slide {
             gap: 30px;
+            padding: 70px 0px 40px 0px;
+            min-width: 100%;
         }
 
         .rec_container_card {
-            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -721,13 +747,10 @@
             width: 100%;
         }
 
+
         .rec_image,
         .rec_prof_container {
             order: -1;
-        }
-
-        .rec_container {
-            padding: 70px 0px 70px 0px;
         }
 
         .rec_text {
@@ -736,7 +759,8 @@
 
         .rec_slider_dots{
             flex-direction: row;
-            margin-left: 0px;
+            gap: 15px;
+            padding-bottom: 50px;
         }
     }
 

@@ -1,5 +1,4 @@
        //   MAIN SLIDER
-
     const slidePictures = document.querySelector(".slide_pictures")
     const images = document.querySelectorAll(".slide_pictures img")
 
@@ -67,35 +66,41 @@
         }
     })
 
-    const recSlideCard = document.querySelector(".rec_container")
-
+    const recSlideBox = document.querySelectorAll(".rec_container_card")
+    const recSliderDots = document.querySelectorAll(".rec_slider_button")
     let recSlideIndex = 0
 
-    function recMoveSlide() {
-        const next = -recSlideIndex * 100
-        recSlideCard.style.transform = `translate(${next}%)`
+    function recSlider(index) {
+        recSlideBox.forEach((box, i) => {
+            box.classList.toggle("active", i === index)
+        })
+        recSliderDots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index)
+        })
     }
 
+    recSliderDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+            recSlideIndex = parseInt(dot.getAttribute("slide_id"))
+            recSlider(recSlideIndex)
+        })
+    })
 
-    // function move() {
-    //     var elem = document.getElementById("myBar");
-    //     var width = 1;
-    //     var id = setInterval(frame, 40);
-    //     function frame() {
-    //       if (width >= 80) {
-    //         clearInterval(id);
-    //       } else {
-    //         width++;
-    //         elem.style.width = width + '%';
-    //       }
-    //     }
-    //   }
+    recSlider(recSlideIndex)
 
-    //   let scrollCount = 0;
+    // const recCardContainer = document.querySelector(".rec_slide")
+    // const dots = document.querySelectorAll(".rec_slider_button")
+    // let activeDotId = 0
 
-    //     document.addEventListener('scroll', function() {
-    //         scrollCount++;
-    //         if (scrollCount === 10) {
-    //             move();
+    // dots.forEach((dot, idx) => {
+    //     dot.setAttribute("data-num", idx)
+    //     dot.addEventListener("click", e => {
+    //         let clickedDotNum = e.target.dataset.num
+    //         if (clickedDotNum == activeDotId) return
+    //         else {
+    //             let displayAreaWidth = document.querySelector(".rec_container").clientWidth
+    //             let pixelsToMove = -displayAreaWidth * clickedDotNum
+    //             recCardContainer.style.transform = 'translateX(' + pixelsToMove + 'px)'
     //         }
-    //     });
+    //     })
+    // })
