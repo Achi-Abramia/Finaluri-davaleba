@@ -104,3 +104,51 @@
     //         }
     //     })
     // })
+
+    const links = document.querySelectorAll("nav a[id]")
+    const cardBox = document.querySelectorAll(".hover_project_container")
+    const showAll = document.getElementById("all")
+
+    links.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault()
+            const targetId = this.getAttribute("id")
+            showCardBox(targetId)
+        })
+    })
+
+    showAll.addEventListener("click", function (event) {
+        event.preventDefault()
+        showAllCardBox()
+    })
+
+    function showCardBox(targetId) {
+        cardBox.forEach((box) => {
+            if (box.id === targetId) {
+                box.classList.add("focused")
+                box.classList.remove("blurred")
+                box.classList.remove("hidden")
+            } else {
+                box.classList.add("blurred")
+                box.classList.remove("focused")
+                box.classList.remove("hidden")
+            }
+        })
+    }
+
+    function showAllCardBox() {
+        cardBox.forEach((box) => {
+            box.classList.remove("blurred")
+            box.classList.remove("focused")
+            box.classList.remove("hidden")
+        })
+    }
+
+    const linkBtn = document.querySelectorAll(".link_btn")
+
+    linkBtn.forEach(btnEl => {
+        btnEl.addEventListener("click", () => {
+            document.querySelector(".link_btn_color")?.classList.remove("link_btn_color")
+            btnEl.classList.add("link_btn_color")
+        })
+    })
