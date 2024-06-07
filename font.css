@@ -47,3 +47,8 @@
     font-family: "Roboto-Regular";
     src: url(Fonts/Roboto-Regular.ttf);
 }
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url(Fonts/Poppins-SemiBold.ttf);
+}
