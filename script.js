@@ -54,6 +54,8 @@
         }
     }
 
+                      //   PROGRESS BARS ON SCROLL
+
     let scrollCount = 0
 
     window.addEventListener("scroll", function() {
@@ -65,6 +67,8 @@
             move("github_bar", 70) 
         }
     })
+
+                       // COMMENDATION SLIDER
 
     const recSlideBox = document.querySelectorAll(".rec_container_card")
     const recSliderDots = document.querySelectorAll(".rec_slider_button")
@@ -104,6 +108,8 @@
     //         }
     //     })
     // })
+
+                    // LAST PROJECTS HOVER  FUNCTION
 
     const links = document.querySelectorAll("nav a[id]")
     const cardBox = document.querySelectorAll(".hover_project_container")
@@ -151,4 +157,114 @@
             document.querySelector(".link_btn_color")?.classList.remove("link_btn_color")
             btnEl.classList.add("link_btn_color")
         })
+    })
+    
+                        //  FORM LABEL REMOVE FUNCTION
+
+    const inputFields = document.querySelectorAll(".form_inputs")
+
+    inputFields.forEach((input) => {
+        const inputLabel = input.nextElementSibling
+        input.addEventListener("input", () => {
+            if (input.value) {
+                inputLabel.style.opacity = "0"
+            } else {
+                inputLabel.style.opacity = "1"
+            }
+        })
+    })
+
+                                    //  FORM VALIDATION
+
+    const statusField = document.createElement("span")
+    statusField.setAttribute("id", "status_field")
+    const contactForm = document.getElementById("contact_form_content")
+    const formContainer = document.querySelector(".contact_form_bars_container")
+    formContainer.appendChild(statusField)
+
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+
+        const name = document.getElementById("your_name")
+        const email = document.getElementById("email")
+        const website = document.getElementById("website")
+        const message = document.getElementById("message")
+
+        
+
+        try {
+            if (name.value.length < 4 || name.value.length > 15) {
+                name.style.border = "4px solid #E93656"
+                throw new Error("Name should contain from 4 to 15 letters")
+            } else {
+                name.style.border = "4px solid green"
+            }
+
+            const validateEmail = (mail) => {
+                return String(mail)
+                  .toLowerCase()
+                  .match(  
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+              }
+    
+              const isValidateEmail = validateEmail(email.value)
+              if (!isValidateEmail) {
+                email.style.border = "4px solid #E93656"
+                throw new Error("Email is not valid")
+              } else {
+                email.style.border = "4px solid green"
+              }
+
+              const validateWebsite = (web) => {
+                return String(web)
+                  .toLowerCase()
+                  .match(/^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/)
+              }
+
+              const isValidateWebsite = validateWebsite(website.value)
+              if (!isValidateWebsite) {
+                website.style.border = "4px solid #E93656"
+                throw new Error("Website is not valid")
+              } else {
+                website.style.border = "4px solid green"
+              }
+
+              if (message.value.length === 0 || message.value.length > 400) {
+                message.style.border = "4px solid #E93656"
+                throw new Error("Message should contain from 1 to 400 letters")
+              } else {
+                message.style.border = "4px solid green"
+              }
+              
+              if (name.style.border === "4px solid green" && email.style.border === "4px solid green" && website.style.border === "4px solid green" && message.style.border === "4px solid green") {
+                statusField.textContent = "Thank you, information sent successfully"
+                statusField.style.color = "green"
+                setTimeout(() => {
+                    name.style.border = "none"
+                    name.value = ""
+                    email.style.border = "none"
+                    email.value = ""
+                    website.style.border = "none"
+                    website.value = ""
+                    message.style.border = "none"
+                    message.value = ""
+                    statusField.textContent = ""
+                }, 4000)
+              }
+
+        } catch (error) {
+            statusField.textContent = error.message
+        }
+
+        const formContent = new FormData(contactForm)
+        const info = Object.fromEntries(formContent)
+
+        fetch("https://borjomi.loremipsum.ge/api/send-message", {
+            method:"POST",
+            body: JSON.stringify(info)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .then(error => console.log(error))
+
     })

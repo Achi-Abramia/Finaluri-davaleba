@@ -44,7 +44,9 @@
     .articles_title,
     .article_title,
     .article_date,
-    .rosa_title {
+    .rosa_title,
+    .send_message,
+    #status_field {
         font-family: "GlacialIndifference-Bold";
     }
 
@@ -71,7 +73,8 @@
     }
 
     .rec_text,
-    .client_text {
+    .client_text,
+    .contact_form_after_title {
         font-family: "Roboto-Light";
     }
 
@@ -80,8 +83,14 @@
         font-family: "Roboto-Regular";
     }
 
-    .client_title {
+    .client_title,
+    .contact_form_bars,
+    .message_container {
         font-family: "Poppins-SemiBold";
+    }
+
+    .contact_form_title {
+        font-family: "Jaapokki-Regular";
     }
     
 
@@ -889,6 +898,120 @@
         color: #FFFFFF;
     }
 
+                 /* CONTACT FORM   */
+
+    .contact_form_container {
+        background: rgba(0, 0, 0, 0.7) url(Images/map.png);
+        background-blend-mode: darken;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 110px;
+    }
+
+    .contact_form_title {
+        margin-top: 110px;
+        color: #FFFFFF;
+        font-size: 45px;
+        letter-spacing: 1.35px;
+    }
+
+    .contact_form_after_title {
+        color: #EEEEEE;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+    }
+
+    .contact_form_bars,
+    .message_container {
+        display: flex;
+        gap: 10px;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        color: #515151;
+    }
+
+    .asterisk_yellow {
+        color: #DAAF1B;
+    }
+
+    .contact_form_bars_container {
+        text-align: center;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .contact_form_bars_container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .input_container,
+    .message_container {
+        position: relative;
+        width: 250px;
+    }
+
+    .contact_form_bars input {
+        width: 100%;
+        height: 50px;
+        padding-left: 30px;
+    }
+    
+    .contact_form_bars label {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+    }
+
+    .form_inputs:focus + label {
+        display: none;
+    }
+
+    .message_container label {
+        position: absolute;
+        top: 18px;
+        left: 30px;
+    }
+
+    .message_container {
+        width: 100%;
+        height: 100px;
+    }
+
+    #message {
+        width: 100%;
+        height: 100%;
+        padding: 18px 15px 0px 30px ;
+    }
+
+    .send_message {
+        background-color: transparent;
+        border: 2px solid #E93656;
+        color: #E93656;
+        font-size: 12px;letter-spacing: 0.96px;
+        padding: 10px 20px;
+        transition: all 0.3s;
+    }
+
+    .send_message:hover {
+        background-color: white;
+        border: 2px solid white;
+    }
+
+    #status_field {
+        display: block;
+        margin-top: 15px;
+        font-size: 24px;
+        color: #E93656;
+    }
+
 
                 /* RESPONSIVE */
 
@@ -982,6 +1105,10 @@
             margin: 70px auto;
             width: 90%;
             gap: 30px;
+        }
+
+        .input_container {
+            width: 185px;
         }
     }
 
@@ -1215,6 +1342,15 @@
             display: flex;
             flex-direction: column;
         }
+
+        .client_container {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 70px auto;
+            width: 78%;
+            gap: 0;
+        }
     }
 
     @media (max-width: 580px) {
@@ -1350,5 +1486,35 @@
 
         .article_title {
             font-size: 30px;
+        }
+
+        .contact_form_bars {
+            flex-direction: column;
+        }
+
+        .input_container {
+            width: 290px;
+        }
+        
+        .message_container {
+            width: 290px;
+        }
+
+        .send_message {
+            margin-top: 20px;
+        }
+
+        .contact_form_after_title {
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        #status_field {
+            text-align: center;
+            font-size: 18px;
+            color: #E93656;
         }
     }

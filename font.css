@@ -52,3 +52,8 @@
     font-family: "Poppins-SemiBold";
     src: url(Fonts/Poppins-SemiBold.ttf);
 }
+
+@font-face {
+    font-family: "Jaapokki-Regular";
+    src: url(Fonts/Jaapokki-Regular.ttf);
+}
