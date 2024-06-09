@@ -240,31 +240,56 @@
                 statusField.textContent = "Thank you, information sent successfully"
                 statusField.style.color = "green"
                 setTimeout(() => {
-                    name.style.border = "none"
-                    name.value = ""
-                    email.style.border = "none"
-                    email.value = ""
-                    website.style.border = "none"
-                    website.value = ""
-                    message.style.border = "none"
-                    message.value = ""
-                    statusField.textContent = ""
-                }, 4000)
+                    location.reload()
+                }, 5000)
+              } else {
+                statusField.textContent = "An error occurred. please try again later"
               }
 
         } catch (error) {
             statusField.textContent = error.message
         }
 
-        const formContent = new FormData(contactForm)
-        const info = Object.fromEntries(formContent)
+        // const open = document.getElementsByClassName("send_message")
+        // const modal_container = document.getElementById("modal_container");
+        // const close = document.getElementById("close");
 
-        fetch("https://borjomi.loremipsum.ge/api/send-message", {
-            method:"POST",
-            body: JSON.stringify(info)
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .then(error => console.log(error))
+        //     open.addEventListener("click", () => {
+        //     modal_container.classList.add("show")
+        // })
+
+        //     close.addEventListener("click", () => {
+        //     modal_container.classList.remove("show")
+        // })
+
+            const formContent = new FormData(contactForm)
+            const info = Object.fromEntries(formContent)
+
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method:"POST",
+                body: JSON.stringify(info)
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .then(error => console.log(error))
+
+
+                // ნამდვილად ძალიან ვეცადე მაგრამ არ გამომივიდა
+
+            let xhr = new XMLHttpRequest()
+            xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true)
+            xhr.setRequestHeader("content-type", "application/json;charset=UTF-8")
+            xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status >= 200 && xhr.status < 300) {
+                alert("message sent")
+            } else if (xhr.readyState === XMLHttpRequest.DONE) {
+                alert("error")
+            }
+        }
+        
 
     })
+
+            
+
+        
