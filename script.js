@@ -277,7 +277,7 @@
    modal.appendChild(close_modal);
    close_modal.textContent = "CLOSE";
 
-   close.addEventListener("click", () => {
+   close_modal.addEventListener("click", () => {
    modal_container.classList.remove("show");
    location.reload();
 });
