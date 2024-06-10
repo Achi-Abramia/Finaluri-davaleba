@@ -41,9 +41,9 @@
 
 
     function move(elementId, elementWidth) {
-        var elem = document.getElementById(elementId)
-        var width = 1
-        var id = setInterval(frame, 20)
+        let elem = document.getElementById(elementId)
+        let width = 1
+        let id = setInterval(frame, 20)
         function frame() {
             if (width >= elementWidth) {
                 clearInterval(id)
