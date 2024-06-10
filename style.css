@@ -1054,6 +1054,7 @@
         opacity: 0;
         pointer-events: none;
         z-index: 999;
+        padding: 0px 15px 0px 15px;
     }
 
     .modal_container.show {
