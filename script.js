@@ -39,6 +39,7 @@
         moveSlide()
     }
 
+            //   PROGRESS BARS ON SCROLL
 
     function move(elementId, elementWidth) {
         let elem = document.getElementById(elementId)
@@ -53,8 +54,7 @@
             }
         }
     }
-
-                      //   PROGRESS BARS ON SCROLL
+                   
 
     let scrollCount = 0
 
