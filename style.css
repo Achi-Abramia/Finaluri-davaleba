@@ -1053,6 +1053,7 @@
         width: 100%;
         opacity: 0;
         pointer-events: none;
+        z-index: 999;
     }
 
     .modal_container.show {
