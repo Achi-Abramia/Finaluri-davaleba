@@ -263,8 +263,19 @@
          xhr.send(JSON.stringify(data));
 });
 
-   const modal_container = document.getElementById("modal_container");
-   const close = document.getElementById("close_modal");
+   const modal_container = document.createElement("div");
+   modal_container.setAttribute("class", "modal_container");
+   formContainer.appendChild(modal_container);
+   const modal = document.createElement("div");
+   modal.setAttribute("class", "modal");
+   modal_container.appendChild(modal);
+   const modal_span = document.createElement("span");
+   modal.appendChild(modal_span);
+   modal_span.textContent ="Thank you for getting in touch! We appreciate you contacting us.";
+   const close_modal = document.createElement("button");
+   close_modal.setAttribute("class", "close_modal");
+   modal.appendChild(close_modal);
+   close_modal.textContent = "CLOSE";
 
    close.addEventListener("click", () => {
    modal_container.classList.remove("show");
