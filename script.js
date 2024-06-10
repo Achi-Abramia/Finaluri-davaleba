@@ -230,12 +230,13 @@
              website.style.border = "4px solid green";
            }
        
-           if (message.value.length === 0 || message.value.length > 400) {
+           if (message.value === "" || message.value.length > 400) {
              message.style.border = "4px solid #E93656";
              throw new Error("Message should contain from 1 to 400 letters");
            } else {
              message.style.border = "4px solid green";
            }
+                
          } catch (error) {
            statusField.textContent = error.message;
          }
